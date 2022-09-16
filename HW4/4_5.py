@@ -5,7 +5,7 @@
 resultDict = {}
 
 def readFile(fileName):
-    sstr1 = '/home/mamus/Моя учеба/git/Python/fail1.txt'
+    sstr1 = '/home/mamus/Моя учеба/git/Python/fail1.txt'#формируется из 4 задачи
     f = open(fileName, 'r')
     data = f.read() + ' '
     f.close()
