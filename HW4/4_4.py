@@ -16,6 +16,6 @@ while k > 0:
 sstr += str(random.randint(0,100)) + ' = 0'
 
 #print(sstr)
-data = open('fail1.txt', 'a')
+data = open('fail1.txt', 'w')
 data.writelines(sstr)
 data.close
