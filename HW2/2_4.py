@@ -14,7 +14,7 @@ digitMultiplication = 1
 check = 1
 for i in positions:
     i = int(i) - 1
-    if i < 0 or i > num:
+    if i < 0 or i > 2 * num:
         print("Такой позиции как ", i+1, " не существует")
         check = 0
         break
