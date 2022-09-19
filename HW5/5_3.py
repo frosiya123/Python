@@ -43,7 +43,7 @@ def rleDecoder(data1):
     return decode
 
 decodedVal = rleDecoder(enCodeVal)
-#print(decodedVal)
+print(decodedVal)
 data3 = open('fail23.txt', 'w')
 data3.writelines(decodedVal)
 data3.close
