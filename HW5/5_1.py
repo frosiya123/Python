@@ -14,10 +14,10 @@
 #остаток = (2021/ (28+1)). И для каждого хода брать остаток от деления
 
 # игрок 1 должен все время вводить число посчитанное по формуле
-# игрок 2 модет вводить число рандомно
+# за игрока 2 числа вводятся рандомно
 import random
 
-allsum = 196
+allsum = 100 #количество конфет может быть любое
 divider = 28
 #remander1 = (allsum % (divider+1))
 
@@ -38,8 +38,8 @@ while allsum > 0:
     firstPlayer.append(firstPlayerStep)
     allsum -= firstPlayerStep
     
-    # Ход вторго игрока
-    secondPlayerStep = random.randint(0,29)
+    # Ход второго игрока
+    secondPlayerStep = random.randint(0,28)
 
     secondPlayer.append(secondPlayerStep)
     allsum -= secondPlayerStep
