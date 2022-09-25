@@ -8,16 +8,19 @@
 # и выведите на экран их сумму.
 
 # k = int(input('Введите число к: '))
-from functools import reduce
-k = 3
+# from functools import reduce
+# k = 3
 
-ksum = 0
-ksum = reduce(
-     (lambda x,y: x+y), 
-    list(map(lambda x: (1 + 1/ x)**x, range(1,k+1)))
-)
+# ksum = 0
+# ksum = reduce(
+#      (lambda x,y: x+y), 
+#     list(map(lambda x: (1 + 1/ x)**x, range(1,k+1)))
+# )
 
-print(ksum)
+# print(ksum)
+
+
+
 # Задайте список из нескольких чисел. Напишите программу, 
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 #  Пример:
@@ -34,4 +37,14 @@ print(ksum)
 
 # print(result)
 
+
+
+from functools import reduce
+
+arr = [1,2,3,4,5,6,7]
+elementSum = reduce(
+    lambda x,y: x+y, 
+    filter(lambda index: ((index -1) %2 != 0), range(1,len(arr)+1))
+)
+print(elementSum)
 #
