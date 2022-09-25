@@ -4,27 +4,34 @@
 # list comprehension
 
 
-# 1. Напишите программу, которая будет преобразовывать десятичное число
-#  в двоичное (без встроенных функций).
-#Пример:
-#- 45 -> 101101
-#- 3 -> 11
-#- 2 -> 10
+# Задайте список из k чисел последовательности (1 + 1\k)^k 
+# и выведите на экран их сумму.
 
+# k = int(input('Введите число к: '))
+from functools import reduce
+k = 3
 
+ksum = 0
+ksum = reduce(
+     (lambda x,y: x+y), 
+    list(map(lambda x: (1 + 1/ x)**x, range(1,k+1)))
+)
 
+print(ksum)
 # Задайте список из нескольких чисел. Напишите программу, 
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 #  Пример:
 #- [2, 3, 5, 9, 3] -> на нечётных индексы элементы 3 и 9, ответ: 12
 # задача решается с использованием метода reduce
 
-arr = [2, 3, 5, 9, 3]
-from functools import reduce
-# mylist = [arr[i] for i in range(1, len(arr),2)]
-result = reduce(
-    (lambda x,y: x+y), 
-    [arr[i] for i in range(1, len(arr),2)]
-)
+# arr = [2, 3, 5, 9, 3]
+# from functools import reduce
+# # mylist = [arr[i] for i in range(1, len(arr),2)]
+# result = reduce(
+#     (lambda x,y: x+y), 
+#     [arr[i] for i in range(1, len(arr),2)]
+# )
 
-print(result)
+# print(result)
+
+#
